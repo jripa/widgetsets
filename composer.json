@@ -1,5 +1,5 @@
 {
-	"name": "silvercart/widgetsets",
+	"name": "jripa/widgetsets",
 	"type": "silverstripe-vendormodule",
 	"description": "Widget-Set module for SilverStripe",
 	"homepage": "http://www.silvercart.org",
@@ -12,6 +12,7 @@
 		}
 	],
 	"require": {
-		"silverstripe/widgets": "^2.2"
+		"silverstripe/widgets": "^3.0",
+		"jripa/silvercart": "^5.3"
 	}
 }
