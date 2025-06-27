@@ -13,6 +13,6 @@
 	],
 	"require": {
 		"silverstripe/widgets": "^3.0",
-		"jripa/silvercart": "^5.3"
+		"jripa/silvercart": "dev-master"
 	}
 }
