@@ -11,8 +11,14 @@
 			"homepage": "https://www.silvercart.de"
 		}
 	],
+	"repositories": [
+	        {
+	          "type": "vcs",
+	          "url": "https://github.com/jripa/silvercart"
+	        }
+    	], 
 	"require": {
 		"silverstripe/widgets": "^3.0",
-		"jripa/silvercart": "dev-master"
+		"silvercart/silvercart": "dev-master"
 	}
 }
