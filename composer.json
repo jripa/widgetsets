@@ -2,10 +2,9 @@
 	"name": "silvercart/widgetsets",
 	"type": "silverstripe-vendormodule",
     	"type": "silverstripe-vendormodule",
-	"version": "dev-master",
 	"minimum-stability": "dev",
 	"prefer-stable": true,
-	"description": "Widget-Set module for SilverStripe",
+	"description": "Widget-Set module for SilverStripe (SS6 compatible)",
 	"homepage": "http://www.silvercart.org",
 	"license": "LGPL-3.0",
 	"keywords": ["silverstripe", "silvercart", "ecommerce", "shop", "webshop", "online shop", "widget", "widgets", "widget sets", "widgetsets"],
@@ -22,7 +21,7 @@
 	        }
     	], 
 	"require": {
-		"silverstripe/widgets": "^3.0",
-		"silvercart/silvercart": "dev-master"
+		"silverstripe/widgets": "3.x-dev",
+		"silvercart/silvercart": "6.x-dev"
 	}
 }
