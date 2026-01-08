@@ -1,13 +1,23 @@
 {
 	"name": "silvercart/widgetsets",
 	"type": "silverstripe-vendormodule",
-    	"type": "silverstripe-vendormodule",
 	"minimum-stability": "dev",
 	"prefer-stable": true,
 	"description": "Widget-Set module for SilverStripe (SS6 compatible)",
 	"homepage": "http://www.silvercart.org",
 	"license": "LGPL-3.0",
-	"keywords": ["silverstripe", "silvercart", "ecommerce", "shop", "webshop", "online shop", "widget", "widgets", "widget sets", "widgetsets"],
+	"keywords": [
+		"silverstripe",
+		"silvercart",
+		"ecommerce",
+		"shop",
+		"webshop",
+		"online shop",
+		"widget",
+		"widgets",
+		"widget sets",
+		"widgetsets"
+	],
 	"authors": [
 		{
 			"name": "SilverCart",
@@ -15,13 +25,18 @@
 		}
 	],
 	"repositories": [
-	        {
-	          "type": "vcs",
-	          "url": "https://github.com/jripa/silvercart"
-	        }
-    	], 
+		{
+			"type": "vcs",
+			"url": "https://github.com/jripa/silvercart"
+		}
+	],
 	"require": {
 		"silverstripe/widgets": "3.x-dev",
 		"silvercart/silvercart": "6.x-dev"
+	},
+	"autoload": {
+		"psr-4": {
+			"WidgetSets\\": "src/"
+		}
 	}
 }
