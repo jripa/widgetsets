@@ -3,7 +3,7 @@
 namespace WidgetSets\Forms;
 
 use SilverStripe\Forms\OptionsetField as SilverStripeOptionsetField;
-use SilverStripe\View\ArrayData;
+use SilverStripe\Model\ArrayData;
 
 /**
  * Special OptionsetField to optimize the creation of a widget.

@@ -8,8 +8,8 @@ use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\HeaderField;
 use SilverStripe\Forms\GridField\GridField;
 use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
-use SilverStripe\ORM\ArrayList;
-use SilverStripe\ORM\DataExtension;
+use SilverStripe\Model\List\ArrayList;
+use SilverStripe\Core\Extension;
 use SilverStripe\ORM\FieldType\DBHTMLText;
 use SilverStripe\ORM\SS_List;
 use WidgetSets\Model\WidgetSet;
@@ -25,7 +25,7 @@ use WidgetSets\Model\WidgetSetWidget;
  * @copyright 2017 pixeltricks GmbH
  * @license see license file in modules root directory
  */
-class WidgetSetSiteTreeExtension extends DataExtension
+class WidgetSetSiteTreeExtension extends Extension
 {
     /**
      * db fields

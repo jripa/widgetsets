@@ -4,7 +4,7 @@ namespace WidgetSets\Extensions;
 
 use SilverStripe\Core\ClassInfo;
 use SilverStripe\Forms\FieldList;
-use SilverStripe\ORM\DataExtension;
+use SilverStripe\Core\Extension;
 use SilverStripe\Widgets\Model\Widget;
 use WidgetSets\Forms\OptionsetField;
 use WidgetSets\Model\WidgetSetWidget;
@@ -19,7 +19,7 @@ use WidgetSets\Model\WidgetSetWidget;
  * @copyright 2018 pixeltricks GmbH
  * @license see license file in modules root directory
  */
-class WidgetSetWidgetExtension extends DataExtension
+class WidgetSetWidgetExtension extends Extension
 {
     /**
      * array which holds all classnames of widgets which should

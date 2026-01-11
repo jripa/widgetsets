@@ -1,8 +1,7 @@
 <?php
 
 namespace WidgetSets\Extensions;
-
-use SilverStripe\ORM\DataExtension;
+use SilverStripe\Core\Extension;
 use WidgetSets\Model\WidgetSet;
 
 /**
@@ -15,7 +14,7 @@ use WidgetSets\Model\WidgetSet;
  * @copyright 2018 pixeltricks GmbH
  * @license see license file in modules root directory
  */
-class WidgetAreaExtension extends DataExtension {
+class WidgetAreaExtension extends Extension {
     
     /**
      * Has one back relation.
