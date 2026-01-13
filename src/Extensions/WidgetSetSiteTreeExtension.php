@@ -69,15 +69,25 @@ class WidgetSetSiteTreeExtension extends Extension
      */
     public function updateCMSFields(FieldList $fields) : void
     {
-        $inheritFromParentField      = CheckboxField::create('InheritFromParent', '');
-        $inheritFromParentFieldGroup = FieldGroup::create($inheritFromParentField);
-        $inheritFromParentFieldGroup->setTitle($this->owner->fieldLabel('InheritFromParent'));
+        // SS6: verhindert doppelte Felder im gleichen Form
+        $existing = $fields->dataFieldByName('InheritFromParent');
+
+        if ($existing) {
+            // Optional: Titel des bestehenden Feldes setzen, aber nichts doppelt hinzufügen
+            $existing->setTitle($this->owner->fieldLabel('InheritFromParent'));
+        } else {
+            $inheritFromParentField      = CheckboxField::create('InheritFromParent', '');
+            $inheritFromParentFieldGroup = FieldGroup::create($inheritFromParentField);
+            $inheritFromParentFieldGroup->setTitle($this->owner->fieldLabel('InheritFromParent'));
+            $fields->addFieldToTab('Root.Widgets', $inheritFromParentFieldGroup);
+        }
+
         $config                      = GridFieldConfig_RelationEditor::create();
         $widgetSetSidebarLabel       = HeaderField::create('WidgetSetSidebarLabel', $this->owner->fieldLabel('WidgetSetSidebarLabel'));
         $widgetSetSidebarField       = GridField::create("WidgetSetSidebar", $this->owner->fieldLabel('AssignedWidgets'), $this->owner->WidgetSetSidebar(), $config);
         $widgetSetContentlabel       = HeaderField::create('WidgetSetContentLabel', $this->owner->fieldLabel('WidgetSetContentLabel'));
         $widgetSetContentField       = GridField::create("WidgetSetContent", $this->owner->fieldLabel('AssignedWidgets'), $this->owner->WidgetSetContent(), $config);
-        $fields->addFieldToTab("Root.Widgets", $inheritFromParentFieldGroup);
+        
         $fields->addFieldToTab("Root.Widgets", $widgetSetSidebarLabel);
         $fields->addFieldToTab("Root.Widgets", $widgetSetSidebarField);
         $fields->addFieldToTab("Root.Widgets", $widgetSetContentlabel);
