@@ -11,7 +11,7 @@ use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
 use SilverStripe\Model\List\ArrayList;
 use SilverStripe\Core\Extension;
 use SilverStripe\ORM\FieldType\DBHTMLText;
-use SilverStripe\ORM\SS_List;
+use SilverStripe\Model\List\SS_List;
 use WidgetSets\Model\WidgetSet;
 use WidgetSets\Model\WidgetSetWidget;
 

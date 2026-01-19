@@ -3,7 +3,7 @@
 namespace WidgetSets\Extensions;
 
 use SilverStripe\Core\Extension;
-use SilverStripe\ORM\SS_List;
+use SilverStripe\Model\List\SS_List;
 use WidgetSets\Model\WidgetSet;
 
 /**
