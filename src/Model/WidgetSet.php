@@ -101,7 +101,7 @@ class WidgetSet extends DataObject
         } else {
             $fields = parent::getCMSFields();
             if ($this->isInDB()) {
-                $fields->addFieldsToTab('Root.Main', $this->scaffoldWidgetAreaFields());
+                $fields->addFieldsToTab('Root.Main', $this->scaffoldWidgetAreaFields()->toArray());
             }
             $fields->removeByName('WidgetAreaID');
         }
