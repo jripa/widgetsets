@@ -71,6 +71,9 @@ class WidgetSetSiteTreeExtension extends Extension
     {
         // SS6: verhindert doppelte Felder im gleichen Form
         $existing = $fields->dataFieldByName('InheritFromParent');
+         $fields->removeByName('WidgetSetSidebar');
+         $fields->removeByName('WidgetSetContent');
+         $fields->removeByName('WidgetSetWidgets');
 
         if ($existing) {
             // Optional: Titel des bestehenden Feldes setzen, aber nichts doppelt hinzufügen
